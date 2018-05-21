@@ -3,11 +3,14 @@ var config = require("./config.js");
 
 var Twitter = new twit(config);
 
+window.open("hashtag.html");
+
 // find latest tweet according the query 'q' in params
-var GiveResult = function() {
-    var paramFromUser = '#Trump'
+var GiveResult = function(paramFromUser) {
+    //var paramFromUser = "banana, trump"
+    //this.paramFromUser = paramFromUser;
     var params = {
-        q: paramFromUser,  // REQUIRED
+        q: this.paramFromUser,  // REQUIRED
         result_type: 'recent',
         lang: 'en'
     }
